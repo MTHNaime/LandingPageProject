@@ -104,10 +104,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // form submission 
 function message() {
-    var firstName = document.getElementById('firstName');
-    var lastName = document.getElementById('lastName');
-    var email = document.getElementById('email');
-    var msg = document.getElementById('msg');
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
+    const email = document.getElementById('email');
+    const msg = document.getElementById('msg');
     const success = document.getElementById('success');
     const fail = document.getElementById('fail');
 
