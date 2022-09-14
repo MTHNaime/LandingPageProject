@@ -20,8 +20,6 @@
 // Global variables
 const navBar = document.getElementById('navbar__list');
 const allSection = document.querySelectorAll('section');
-// Smooth scrolling of the document 
-document.documentElement.style.scrollBehavior = "smooth";
 
 // generating the navigation bar with iterating a loop over the unordered list link
 const navigationBarList = () => {
@@ -91,6 +89,18 @@ const scrollToAnchor = () => {
 };
 
 scrollToAnchor();
+
+//function for smooth scrolling by targeting anchor
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
 
 // form submission 
 function message() {
